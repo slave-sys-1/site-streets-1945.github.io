@@ -1,0 +1,240 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.map__wrapper {
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+    height: 1080px;
+    background-image: url(img/map_main.png);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(20, 20, 20);
+}
+.Back {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    padding: 15px;
+}
+.zakamsk {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 800px;
+    left: 900px;
+}
+.krym {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 350px;
+    left: 80px;
+}
+.vodniki {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 320px;
+    left: 1500px;
+}
+.kir_poselok {
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    top: 100px;
+    left: 1450px;
+}
+#panfilov {
+    position: absolute;
+    top: 460px;
+    left: 900px;
+}
+#m_ribalko {
+    position: absolute;
+    top: 460px;
+    left: 400px;
+}
+#fedos {
+    position: absolute;
+    top: 460px;
+    left: 1000px;
+}
+#hudanin {
+    position: absolute;
+    top: 600px;
+    left: 800px;
+}
+#tancorov {
+    position: absolute;
+    top: 600px;
+    left: 1000px;
+}
+#lyadov {
+    position: absolute;
+    top: 150px;
+    left: 400px;
+}
+#chekalin {
+    position: absolute;
+    top: 600px;
+    left: 1600px;
+}
+p {
+    background-color: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    border: solid none;
+    padding: 20px;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+div {
+    transition: all 200ms ease-in-out;
+}
+a, button {
+    background-color: rgb(50, 50, 50);
+    opacity: 0.8;
+    padding: 20px;
+    padding-top: 50px;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    border: solid none;
+    border-radius: 5px;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+a:hover, button:hover {
+    background-color: rgb(60, 60, 60);
+    transform: scale(1.2);
+}
+.street:hover {
+    fill: red;
+}
+a, button {
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+}
+img {
+    transition: all 200ms ease-in-out;
+}
+.districts img {
+    width: 100px;
+    height: auto;
+    scale: 1;
+    border: solid none;
+    border-radius: 5px;
+    position: absolute;
+    left: 5px;
+    bottom: 35px
+}
+.districts p {
+    max-width: 200px;
+    opacity: 0;
+}
+.districts, .streets {
+    width: 1920px;
+    height: 1080px;
+}
+.districts div:hover > p {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+.districts img:hover, .streets img:hover {
+    transform: scale(1.5);
+    bottom: 70px;
+}
+.districts div:hover {
+    transform: scale(1.2);
+}
+.street, .district {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    fill: white;
+    transition: all 200ms ease-in-out;
+}
+#krim__wrapper {
+    width: 100%;
+    height: 1080px;
+    background-image: url(img/map_1.png);
+}
+#zakamsk__wrapper {
+    width: 100%;
+    height: 1080px;
+    background-image: url(img/map_2.png);
+}
+#vod__wrapper {
+    width: 100%;
+    height: 1080px;
+    background-image: url(img/map_5.png);
+}
+#kp__wrapper {
+    width: 100%;
+    height: 1080px;
+    background-image: url(img/map_4.png);
+}
+.district__wrapper {
+    margin: 0;
+    padding: 0;
+}
+.tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px 15px;
+    background-color: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    opacity: 0.8;
+    display: none;
+}
+.info__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1080px;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: 300ms all;
+    pointer-events: none;
+    z-index: 10;
+}
+.info__bg.active {
+    pointer-events: all;
+    opacity: 1;
+    transition: 300ms all;
+}
+.info {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    width: 500px;
+}
